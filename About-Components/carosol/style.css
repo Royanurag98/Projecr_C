@@ -1,0 +1,26 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  
+  .carousel-container {
+    width:1200px;
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+    border: 10px solid red;
+  }
+  
+   .carousel-track {
+    width: 100%;
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+  
+   img {
+    width:100%;
+    object-fit: cover;
+  
+  }
+  

@@ -1,0 +1,313 @@
+
+nav{
+    background-color: hwb(0 23% 77%);
+    width: 100%;
+    height: 85px; 
+}
+
+label.logo{
+    /* color: white; */
+    font-family: "Briem Hand", cursive;;
+    font-size: 30px;
+    line-height: 70px;
+    padding: 0 60px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+    text-decoration: underline orange;
+}
+@media(max-width:380px){
+    label.logo {
+        padding: 0 20px;
+  }}
+
+nav ul{
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+}
+
+nav ul li{
+    display: inline-block;
+    margin: 20px 25px 0px 0px;
+    list-style: none;
+    flex-direction: column-reverse;
+}
+
+.imgBox{
+   background-color: white;
+   float: center;
+   cursor: pointer;
+   border-radius: 50%;
+}
+
+nav ul li a{
+    color: white;
+    font-size: 23px;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition:0 .3s; 
+}
+
+.hamb{
+    color: white;
+    background-color:orange;
+}
+
+.navBtn{
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.navBtn img{
+    width:100%;
+    height:100%;
+    border-radius: 50%;
+    object-fit: cover;  
+    border: 1px  #fff;   
+}
+
+.btnlogout{
+    display: none;
+}
+
+.navBtn:hover{
+  background-color: black;
+  cursor: pointer;
+  color: #fff;
+}
+
+a.Active, a:hover{
+    color:orange;
+}
+
+.hover-line::after{
+    content: '';
+    display: block;
+    margin-top: 2px;
+    width: 0;
+    height: 2px;
+    background-color: orange;
+    transition: width .3;
+}
+
+.hover-line:hover::after{
+    width: 100%;
+    transition: width .3s; 
+}
+
+
+#Check{
+    display: none;
+}
+.checkbtn{
+    font-size: 30px;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+.checkbtn img{
+    background-color: orange;
+    color: orange;
+    width: 40px;
+    height: 30px;
+    display: inline;
+}
+
+.infoBox{
+    width: 300px;
+    height: 200px;
+    display: none;
+}
+
+/* @media(max-width:1090px){
+  nav ul li a{
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition:0 .3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+   
+} 
+.navBtn{
+  padding: 5px;
+  font-size: 25px;
+  background-color: orange;
+  font-weight: 600;
+  border-radius: 5px;
+  border: none;
+ }
+}
+@media(max-width:974px){
+  nav ul li a{
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition:0 .3s;  
+}
+
+} */
+
+@media(max-width:950px)
+{
+    .checkbtn{
+        display:block;
+    }
+    ul{
+        position: absolute;
+        width: 260px;
+        top: 85px;
+        left: -100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: right;
+        transform: all 0.5s;
+        opacity: 1;
+        z-index: 10;  
+        backdrop-filter: blur(20px);
+        border: 1px  #fff;  
+    }
+    nav ul li{
+        display: block;
+        margin: 20px 0;
+        line-height: 30px;
+    }
+    nav ul li a{
+       font-size: 20px;
+       background: none;    
+    }
+    .infoBox{
+        width: 100%;
+        height: 200px;
+        display: block;
+        display: flex;
+        justify-content: center;
+        padding: 20px;
+        flex-direction: column;
+        color: #fff;
+        font-family: sans-serif;
+        font-weight: 600; 
+    
+        
+    }
+    .infoBox img{
+        width: 30px;
+        height: 30px;
+        background-color: #fff;
+        float: right;
+        margin: 0;
+        padding: 0;   
+    }
+    .infoBOxImg{
+        width: 100px;
+        height: 100px;
+        margin-left: 50px;
+        margin-bottom: 10px;
+        border-radius: 50%;
+        border: 5px solid #ffa500;
+    }
+    .infoBox .infoBOxImg img {
+        width: 100%;
+        height: 100%;
+        /* object-fit: contain; */
+        object-fit: cover;
+        border-radius: 50%;     
+     }.navBtn{
+      display: none;
+     }
+
+    .btnlogout{
+    padding: 10px 20px;
+    display:block;
+    margin-top: -30px;
+    font-size: 20px;
+    color: #fff;
+    background-color: orange;
+    border: none;
+    border-radius: 5px;
+    }
+    a:hover, a.active{
+        text-decoration: none;
+        color: #c8f017;
+    }
+    .hover-line::after{
+        display: inline;
+        z-index:30;  
+    }
+    #Check:checked ~ul{
+      left: 0;
+    }
+}
+@media(max-width:810px)
+{
+    nav ul{
+       background-color: #1f1e1e;
+    }}
+
+  /* Toggle button ///////////////////////////*/
+
+
+.switch{
+    position: relative;
+    display: inline-block;
+    width: 4.2rem;
+    height: 2rem;
+    background-color: rgb(167, 162, 162);
+    border-radius: 50px;
+    transition:all 0.4s linear ;
+     border: 2px solid black; 
+     box-shadow: 0 0 10px white;
+     /* margin-top: 20px; */
+
+    } 
+    .down{
+        line-height: 90px;
+    }
+      input{
+        display: none;
+        align-items: center;  
+      }
+      .btn-b{
+        margin-top: 25px;
+      }
+
+/* inside the button balls toggle button */
+.switch::after{
+    content: "";
+    position: absolute;
+    top: .2rem;
+    left: .1rem;
+    width: 1.7rem;
+    height: 1.4rem;
+    border-radius: 50%;
+    background-color:#3b1bf1;
+    transition:all 0.4s linear ;
+    box-shadow: 0px 5px 10px rgb(0,0,0,0,4);
+
+}
+
+input[type="checkbox"]:checked + .switch:after{
+    translate: 2.1rem 0;
+}
+input[type="checkbox"]:checked + .switch{
+  background-color:#ffff;
+}
+
+
+@media(max-width:550px){
+   .switch{
+    display: none;
+}}

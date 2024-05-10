@@ -1,0 +1,32 @@
+/* SHape and size*/
+.socialIcon{
+    z-index: 10;
+    width: 30%;
+    height: 300px;
+    position: absolute;
+ 
+    margin-left: 0px;
+   display: flex;
+   justify-content: start;
+    background-color: orange;
+    border-radius: 3px;
+    clip-path: polygon(0 0, 100% 0, 78% 26%, 0 26%);
+   
+  }
+
+
+  /* Shape-2 */
+  .Traingle{
+    z-index: 10;
+    width: 30%;
+    height: 400px;
+    position: absolute;
+    margin-top: 50px;
+ 
+  
+
+    background-color: orange;
+    border-radius: 3px;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+   
+  }

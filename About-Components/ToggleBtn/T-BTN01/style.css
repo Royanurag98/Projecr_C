@@ -1,0 +1,41 @@
+body{
+    height: 100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.switch{
+position: relative;
+display: inline-block;
+width: 5rem;
+height: 2.3rem;
+background-color: rgb(167, 162, 162);
+border-radius: 50px;
+transition:all 0.4s linear ;
+/* border: 2px solid black; */
+box-shadow: inset 0px 5px 15px rgb(0,0,0,0,4), inset 0px -5px 15px rgb(255,255,255,0,4);
+}
+
+/* inside the button balls toggle button */
+.switch::after{
+    content: "";
+    position: absolute;
+    top: .1rem;
+    left: .1rem;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background-color:#3b1bf1;
+    transition:all 0.4s linear ;
+    box-shadow: 0px 5px 10px rgb(0,0,0,0,4);
+}
+
+input[type="checkbox"]:checked + .switch:after{
+    translate: 2.7rem 0;
+}
+input[type="checkbox"]:checked + .switch{
+  background-color:#ffff;
+}
+input[type="checkbox"]{
+    display: none;
+}

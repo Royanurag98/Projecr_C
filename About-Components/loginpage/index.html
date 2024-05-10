@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Membership Form</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>Membership Form</h2>
+    <form action="#" method="POST">
+        <div class="form-group">
+            <label for="full-name">Full Name:</label>
+            <input type="text" id="full-name" name="full-name" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+            <label for="mobile-number">Mobile Number:</label>
+            <input type="tel" id="mobile-number" name="mobile-number" required>
+        </div>
+        <div class="form-group">
+            <label for="duration">Duration:</label>
+            <select id="duration" name="duration" required>
+                <option value="monthly">Monthly</option>
+                <option value="yearly">Yearly</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="mode-of-payment">Mode of Payment:</label>
+            <select id="mode-of-payment" name="mode-of-payment" required>
+                <option value="cash">Cash</option>
+                <option value="online">Online</option>
+            </select>
+        </div>
+        <p class="head">Personal Training:</p>
+        <div class="radio-container">
+            <div class="b1">
+            <input type="radio" id="option1" name="preference" value="option1" >
+            <label for="option1" class="options1">Required</label>
+        </div>
+        <div class="b2">
+            <input type="radio" id="option2" name="preference" value="option2">
+            <label for="option2"  class="options1">Not Required</label>
+        </div>
+    </div>
+        <div class="Agrement">
+            <div>
+            <input type="checkbox" id="accept-terms" name="accept-terms" required style="display: block;"> 
+            <label for="accept-terms" class="accept">I accept all the terms and conditions</label>
+        </div>
+        <button type="submit">Buy Plan</button>
+    </form>
+  
+</div>
+<button class="btn">show/hede</button>
+  <script>
+    const form = document.querySelector(".container");
+    const btn = document.querySelector(".btn");
+    console.log(form);
+    btn.addEventListener("click", () => {
+        if (form.style.display === "none") {
+            form.style.display = "block";
+        } else {
+            form.style.display = "none";
+        }
+    });
+</script>>
+</body>
+</html>

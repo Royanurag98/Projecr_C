@@ -1,0 +1,112 @@
+body{
+   
+    background:#2ec194;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+    min-height: 100vh;
+  
+}
+.container{
+  position: relative;
+    display: flex;
+    
+    flex-wrap: wrap;
+    flex-direction:row;
+    justify-content: center;
+    gap: 50px;
+}
+.container .Box{
+    position: relative;
+    width: 300px;
+    height: 280px;
+    margin: 40px 0;
+    font-size: 20px;
+    font-weight: 800;
+    background-color:#fff;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    
+}
+.container .Box.Shadow-1{
+    box-shadow: -30px 30px 25px rgba(0,0,0,0.3);
+}
+.container .Box.Shadow-2::before{
+    content: '';
+    position: absolute;
+    bottom: 8px;
+    left: 10%;
+    width: 90%;
+    height: 50px;
+    background:rgba(0,0,0,0.3) ;
+  transform-origin: left;
+  transform: skewY(5deg);
+  z-index: -1;
+  filter: blur(4px);
+
+}
+.container .Box.Shadow-3::before{
+    content: '';
+    position: absolute;
+    bottom:0;
+    left: 0;
+    width: 50%;
+    height: 30px;
+    background:rgba(0,0,0,0.3) ;
+  transform-origin: right;
+  transform: skewY(-8deg);
+  z-index: -1;
+  filter: blur(10px);
+
+}
+
+.container .Box.Shadow-4::before{
+    content: '';
+    position: absolute;
+    bottom:0;
+    left: 0;
+    width: 50%;
+    height: 30px;
+    background:rgba(0,0,0,0.3) ;
+  transform-origin: right;
+  transform: skewY(-8deg);
+  z-index: -1;
+  filter: blur(10px);
+
+}
+.container .Box.Shadow-4::after{
+    content: '';
+    position: absolute;
+    bottom:0;
+  right: 0;
+    width: 50%;
+    height: 30px;
+    background:rgba(0,0,0,0.3) ;
+  transform-origin: left;
+  transform: skewY(8deg);
+  z-index: -1;
+  filter: blur(10px);
+
+    
+}
+.container .Box.Shadow-5{
+  
+    background:#2ec194 ;
+    border-radius: 15px;
+    box-shadow: -15px -15px 15px rgba(255, 255, 255, 0.2),
+    15px 15px 15px rgba(0,0,0,0.1);  
+}
+
+.container .Box.Shadow-6{
+  
+    background:#2ec194 ;
+    border-radius: 15px;
+    box-shadow: -15px -15px 15px rgba(255, 255, 255, 0.2),
+    15px 15px 15px rgba(0,0,0,0.1),
+    inset -5px -5px 5px rgba(255,255,255,0.2),
+    inset 5px 5px 5px rgba(0,0,0,0.1);  
+}

@@ -1,0 +1,36 @@
+div input{
+    display: none;
+}
+div label{
+    display: block;
+    position: relative;
+    width: 90px;
+    height: 40px;
+    background-color: rgb(99, 96, 96);
+    border-radius: 50px;
+    transition:all 0.4s linear ;
+    box-shadow: inset 0px 5px 15px rgb(0,0,0,0,5), inset 0px -5px 15px rgb(255,255,255,0,9);
+}
+/* Toggle btn  */
+div label:before{
+    position: absolute;
+    top: 2px;
+    left: 13px;
+    content: "";
+    display: block;
+    width: 35px;
+    height:35px;
+    transform: translate(-30%);
+    background-color: hsl(0, 0%, 5%);
+    border-radius: 50%;
+    transition:all 0.4s linear ;
+
+   
+}
+/* // if input box is checked then(+) use properties */
+div input:checked + label{
+   background-color: #f6f6fa; 
+}
+div input:checked + label:before{
+    left:60px
+ }
